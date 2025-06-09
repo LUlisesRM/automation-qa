@@ -1,0 +1,14 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "pruebas-cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ulises-milan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.4.1"
+  }
+}
