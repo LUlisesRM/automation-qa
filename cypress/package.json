@@ -9,6 +9,8 @@
   "author": "ulises-milan",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^14.4.1"
+    "cypress": "^14.4.1",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^2.0.1"
   }
 }
