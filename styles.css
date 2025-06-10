@@ -6,19 +6,23 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+  padding: 20px;
 }
 
 /* Header */
 header {
   background-color: #fff;
+  color: #000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 1rem;
+  text-align: center;
 }
 
 .top-bar {
@@ -91,7 +95,7 @@ header {
   display: block;
 }
 
-/* Carrusel */
+/* Carrusel y Ofertas */
 .carousel, .offers {
   padding: 40px 20px;
   background-color: #fff;
@@ -178,15 +182,7 @@ footer {
   color: #ccc;
 }
 
-
-/* Estilos generales para la página de registro */
-body {
-  background: linear-gradient(to bottom right, #e0f7fa, #fff);
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  padding: 20px;
-}
-
+/* Página de registro */
 .register-container {
   max-width: 700px;
   margin: 0 auto;
@@ -281,4 +277,96 @@ form a {
 
 form a:hover {
   color: #004d40;
+}
+
+/* Página del carrito */
+#cart-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+
+.product-price,
+.product-total {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.qty-btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.qty-input {
+  width: 60px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart-summary {
+  text-align: right;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ccc;
+}
+
+.cart-summary h2 {
+  margin-bottom: 1rem;
+}
+
+#checkout-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
 }
