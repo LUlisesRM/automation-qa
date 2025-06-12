@@ -1,0 +1,14 @@
+INSTALACION DE PAQUETES
+-npm install --save-dev @4tw/cypress-drag-drop (para sosten y suelta)
+-npm install -D cypress-plugin-tab (click fisico del tabulador en teclado)
+-npm install -D cypress-xpath (incrustacion de codigo xpath para su lectura en cypress)
+
+
+EJECUCION DEL TEST DESDE CONSOLA (TODOS)
+- node_modules/.bin/cypress run /o tambien/ - npx cypress run --headed
+
+EJECUCION DEL TEST DESDE CONSOLA (TODOS - Eligiendo el Navegador)
+-npx cypress run -browser chrome
+
+EJECUCION DEL TEST DESDE CONSOLA (SOLO EL SELECCIONADO)
+-npx cypress run --spec "cypress/e2e/seccion_2/Asserts.cy.js" /o tambien/ -npx cypress run --spec "cypress/e2e/seccion_2/*" (para ejecutar todos los de esa carpeta)

@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automation QA</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-resources/estilos-home.js.css">
 </head>
+
 <body>
+  
   <header id="header">
     <div class="top-bar">
       <div class="logo" id="site-logo">
-        <img src="logo.png" alt="Logo Empresa">
+        <a href="index.html">
+          <img src="site-resources/src/logo.jpg" alt="Logo Empresa">
+        </a>
       </div>
       <div class="right-links">
         <a href="#" id="login-link">Login</a>
-        <a href="crear-cuenta.html" id="register-link">Crear cuenta</a>
-        <a href="carrito.html" id="cart-link">
-          <img src="cart-icon.png" alt="Carrito" style="width: 24px; vertical-align: middle;">
+        <a href="site-resources/crear-cuenta/crear-cuenta.html" id="register-link">Crear cuenta</a>
+        <a href="site-resources/carrito/carrito.html" id="cart-link">
+          <img src="site-resources/carrito/icono-carrito.webp" alt="Carrito" style="width: 24px; vertical-align: middle;">
         </a>
       </div>
     </div>
@@ -44,18 +48,34 @@
     </nav>
   </header>
 
-  <!-- Banner Principal -->
+  
   <section class="banner" id="main-banner">
-    <img src="banner.jpg" alt="Promoción Principal">
+    <img src="site-resources/src/banner-principal.jpg" alt="Promoción Principal">
+    <h1>¿Quieres RODAR?</h1>
   </section>
 
-  <!-- Carrusel de Productos 1 -->
+  
   <section class="carousel" id="carousel-novedades">
     <h2>Novedades</h2>
     <div class="carousel-items">
-      <div class="product" id="product-1">Producto 1</div>
-      <div class="product" id="product-2">Producto 2</div>
-      <div class="product" id="product-3">Producto 3</div>
+      <div class="product" id="product-1">
+        <img src="site-resources/src/bicicleta-gris.webp" alt="bicicleta gris" style="width:200px;">
+      </div>
+      <div class="product" id="product-2">
+        <img src="site-resources/src/bicicleta-blanca.webp" alt="bicicleta blanca" style="width:200px;"">
+      </div>
+      <div class=" product" id="product-3">
+        <img src="site-resources/src/bicicleta-violeta.webp" alt="bicicleta violeta" style="width:200px;">
+      </div>
+      <div class="product" id="product-3">
+        <img src="site-resources/src/bicicleta-perla.webp" alt="bicicleta perla" style="width:200px;">
+      </div>
+      <div class="product" id="product-3">
+        <img src="site-resources/src/bicicleta-hueso.webp" alt="bicicleta hueso" style="width:200px;">
+      </div>
+      <div class="product" id="product-3">
+        <img src="site-resources/src/bicicleta-blanca-dos.webp" alt="bicicleta blanca de ruta" style="width:200px;">
+      </div>
     </div>
   </section>
 
@@ -114,5 +134,7 @@
       <p>&copy; 2025 Tienda BikeParts | Calle Ficticia 123, CDMX | Tel: (55) 1234-5678</p>
     </div>
   </footer>
+  <script src="site-resources/scripts-home.js"></script>
 </body>
+
 </html>

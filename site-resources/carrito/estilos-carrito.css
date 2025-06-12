@@ -1,0 +1,115 @@
+/* Contenedor general del carrito */
+#cart-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada producto en el carrito */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Detalles del producto */
+.item-details {
+  flex-grow: 1;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+
+/* Precio y total del producto */
+.product-price,
+.product-total {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+/* Controles de cantidad */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* Botones de + y - */
+.qty-btn {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.qty-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Campo numérico de cantidad */
+.qty-input {
+  width: 60px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Sección resumen del carrito */
+.cart-summary {
+  text-align: right;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #ccc;
+}
+
+/* Título del total */
+.cart-summary h2 {
+  margin-bottom: 1rem;
+}
+
+/* Botón de pago */
+#checkout-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
+}
+
+/* Título del carrito */
+#cart-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
