@@ -1,7 +1,15 @@
 /* Página de registro */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantiene la fuente del sitio principal */
+  line-height: 1.6;
+  background-color: #f4f4f4; /* Fondo del cuerpo igual que el de la página principal */
+  color: #333; /* Color de texto general */
+  padding: 20px;
+}
+
 .register-container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 40px auto; /* Aumenta el margen superior para más espacio */
   background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
@@ -11,21 +19,21 @@
 .register-container h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #00695c;
+  color: #1f2937; /* Color de tus encabezados principales */
 }
 
 form fieldset {
-  border: 1px solid #b2dfdb;
+  border: 1px solid #e5e7eb; /* Borde más sutil, similar al de los productos */
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
-  background-color: #f1fefb;
+  background-color: #f9fafb; /* Fondo más claro, similar al de los productos */
 }
 
 form legend {
   padding: 0 10px;
   font-weight: bold;
-  color: #004d40;
+  color: #1f2937; /* Color de tus encabezados principales */
 }
 
 form label {
@@ -33,6 +41,7 @@ form label {
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: 500;
+  color: #333; /* Un color de texto estándar */
 }
 
 form input[type="text"],
@@ -43,18 +52,34 @@ form input[type="password"],
 form select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Borde estándar para inputs */
   border-radius: 6px;
   font-size: 1em;
+  box-sizing: border-box; /* Asegura que padding no aumente el ancho total */
 }
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="date"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+  border-color: #007BFF; /* Borde azul al enfocar, como los enlaces */
+  outline: none; /* Elimina el contorno por defecto del navegador */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}
+
 
 form input[type="radio"] {
   margin-right: 5px;
+  /* Estilo adicional para radios (opcional) */
+  accent-color: #007BFF; /* Cambia el color del radio botón en navegadores modernos */
 }
 
 form .terms {
   margin-top: 20px;
   font-size: 0.95em;
+  color: #555; /* Un tono un poco más suave */
 }
 
 form .terms label {
@@ -64,6 +89,9 @@ form .terms label {
 
 form .terms input[type="checkbox"] {
   margin-right: 10px;
+  /* Estilo adicional para checkboxes (opcional) */
+  accent-color: #007BFF; /* Cambia el color del checkbox en navegadores modernos */
+  transform: scale(1.1); /* Hace el checkbox un poco más grande */
 }
 
 form .form-submit {
@@ -72,25 +100,35 @@ form .form-submit {
 }
 
 form button[type="submit"] {
-  background-color: #00796b;
+  background-color: #007BFF; /* El azul principal de tu sitio */
   color: #fff;
   border: none;
   padding: 12px 30px;
   font-size: 1.1em;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añade transición para transform */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el botón */
 }
 
 form button[type="submit"]:hover {
-  background-color: #004d40;
+  background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de levantamiento, como el botón de "Crear cuenta" en el header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
 }
 
 form a {
-  color: #00796b;
+  color: #007BFF; /* El azul principal de tu sitio */
   text-decoration: underline;
 }
 
 form a:hover {
-  color: #004d40;
+  color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Opcional: Estilo para mensajes de error si los implementas con JS */
+.error-message {
+    color: #e33;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
