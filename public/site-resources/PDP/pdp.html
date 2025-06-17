@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation QA</title>
+  <link rel="stylesheet" href="estilos-pdp.css">
+  <link rel="stylesheet" href="../estilos-home.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="top-bar">
+      <div class="logo" id="site-logo">
+        <a href="../../index.html">
+          <img src="../src/logo.jpg" alt="Logo Empresa">
+        </a>
+      </div>
+      <div class="right-links">
+        <a href="#" id="login-link">Login</a>
+        <a href="../crear-cuenta/crear-cuenta.html" id="register-link">Crear cuenta</a>
+        <a href="../carrito/carrito.html" id="cart-link">
+          <img src="../carrito/icono-carrito.webp" alt="Carrito" style="width: 24px; vertical-align: middle;">
+        </a>
+      </div>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li>Categorías
+          <ul>
+            <li><a href="#" id="cat-urbanas">Bicicleta Urbana</a></li>
+            <li><a href="#" id="cat-montana">Bicicleta de Montaña</a></li>
+            <li><a href="#" id="cat-ruta">Bicicleta de Ruta</a></li>
+            <li><a href="#" id="cat-hibridas">Bicicleta Híbrida</a></li>
+            <li><a href="#" id="cat-electricas">Bicicleta Eléctrica</a></li>
+            <li><a href="#" id="cat-plegables">Bicicleta Plegable</a></li>
+          </ul>
+        </li>
+        <li>Protección/Cascos
+          <ul>
+            <li><a href="#" id="cat-cascos-multiu">Cascos Multi-Uso</a></li>
+            <li><a href="#" id="cat-cascos-ruta">Cascos de Ruta</a></li>
+            <li><a href="#" id="cat-cascos-montana">Cascos de Montaña</a></li>
+            <li><a href="#" id="cat-rodilleras">Rodilleras y Coderas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-detail-container">
+    <div class="product-images">
+      <div class="main-image">
+        <img src="site-resources/src/bicicleta-gris-grande.webp" alt="Bicicleta Urbana Gris">
+      </div>
+      <div class="thumbnail-gallery">
+        <img src="site-resources/src/bicicleta-gris-thumb1.webp" alt="Vista lateral">
+        <img src="site-resources/src/bicicleta-gris-thumb2.webp" alt="Detalle del manillar">
+        <img src="site-resources/src/bicicleta-gris-thumb3.webp" alt="Rueda delantera">
+        <img src="site-resources/src/bicicleta-gris-thumb4.webp" alt="Detalle del asiento">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1 id="product-title"></h1>
+      <p id="product-price"></p>
+      <p class="product-availability">En stock: <span>15 unidades</span></p>
+
+      <div class="product-options">
+        <div class="option-group">
+          <label for="color-select">Color:</label>
+          <select id="color-select" name="color">
+            <option value="gris">Gris</option>
+            <option value="blanca">Blanca</option>
+            <option value="violeta">Violeta</option>
+          </select>
+        </div>
+
+        <div class="option-group">
+          <label for="size-select">Talla:</label>
+          <select id="size-select" name="size">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+          </select>
+        </div>
+
+        <div class="quantity-control">
+          <label for="quantity">Cantidad:</label>
+          <input type="number" id="quantity" name="quantity" value="1" min="1" max="15">
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button class="add-to-cart-btn">Añadir al Carrito</button>
+        <button class="buy-now-btn">Comprar Ahora</button>
+      </div>
+
+      <div class="product-description">
+        <h2>Descripción del Producto</h2>
+        <p id="product-description"></p>
+        <h3>Características Clave:</h3>
+        <ul id="product-characteristics"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-row shipping-details">
+      <p>Envío gratis en compras mayores a $999 | Entrega express disponible | Rastreo en tiempo real</p>
+    </div>
+    <div class="footer-row info-columns">
+      <div class="column">
+        <h3>Acerca de</h3>
+        <ul>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Tendencias</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Ayuda</h3>
+        <ul>
+          <li><a href="#">Compra de productos</a></li>
+          <li><a href="#">Envío del producto</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Tiktok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-row copyright">
+      <p>&copy; 2025 Tienda BikeParts | Calle Ficticia 123, CDMX | Tel: (56) 56862565</p>
+    </div>
+  </footer>
+  <script src="pdp.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.simple-header {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-simple {
+  width: 140px;
+  align-items: left;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 60px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.login-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.login-text h1 {
+  font-size: 1.8rem;
+  color: #1f2937;
+}
+
+.login-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background-color: #0073e6;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #005bb5;
+}
+
+.crear-cuenta-link {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.crear-cuenta-link:hover {
+  text-decoration: underline;
+}

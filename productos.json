@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bicicleta Urbana Gris",
+    "precio": 4500,
+    "descripcion": "Bicicleta urbana de acero con cambios Shimano de 7 velocidades.",
+    "imagen": "src/bicicleta-gris.webp",
+    "categoria": "urbana"
+  },
+  {
+    "id": 2,
+    "nombre": "Bicicleta Blanca Ruta",
+    "precio": 5200,
+    "descripcion": "Bicicleta ligera ideal para entrenamientos en carretera.",
+    "imagen": "src/bicicleta-blanca.webp",
+    "categoria": "ruta"
+  },
+  {
+    "id": 3,
+    "nombre": "Bicicleta Violeta Montaña",
+    "precio": 4999,
+    "descripcion": "Bicicleta para montaña con suspensión delantera y frenos de disco.",
+    "imagen": "src/bicicleta-violeta.webp",
+    "categoria": "montaña"
+  },
+  {
+    "id": 4,
+    "nombre": "Bicicleta Perla Híbrida",
+    "precio": 4700,
+    "descripcion": "Bicicleta híbrida para ciudad y caminos ligeros.",
+    "imagen": "src/bicicleta-perla.webp",
+    "categoria": "hibrida"
+  },
+  {
+    "id": 5,
+    "nombre": "Bicicleta Hueso Eléctrica",
+    "precio": 8000,
+    "descripcion": "Bicicleta eléctrica con batería de 36V y motor de 250W.",
+    "imagen": "src/bicicleta-hueso.webp",
+    "categoria": "electricas"
+  },
+  {
+    "id": 6,
+    "nombre": "Casco Multiuso Rojo",
+    "precio": 750,
+    "descripcion": "Casco versátil con ventilación para uso urbano o deportivo.",
+    "imagen": "src/casco-rojo.webp",
+    "categoria": "cascos-multiu"
+  },
+  {
+    "id": 7,
+    "nombre": "Casco de Ruta Negro",
+    "precio": 890,
+    "descripcion": "Casco aerodinámico diseñado para rutas largas.",
+    "imagen": "src/casco-ruta.webp",
+    "categoria": "cascos-ruta"
+  },
+  {
+    "id": 8,
+    "nombre": "Rodilleras y Coderas MTB",
+    "precio": 600,
+    "descripcion": "Protecciones resistentes para downhill y montaña.",
+    "imagen": "src/rodilleras.webp",
+    "categoria": "rodilleras"
+  },
+  {
+    "id": 9,
+    "nombre": "Bicicleta Plegable Compact",
+    "precio": 5300,
+    "descripcion": "Diseño compacto y ligero, ideal para transporte público.",
+    "imagen": "src/bicicleta-plegable.webp",
+    "categoria": "plegables"
+  },
+  {
+    "id": 10,
+    "nombre": "Bicicleta de Ruta Blanca Pro",
+    "precio": 6400,
+    "descripcion": "Marco de aluminio, ideal para competencias.",
+    "imagen": "src/bicicleta-blanca-dos.webp",
+    "categoria": "ruta"
+  }
+]

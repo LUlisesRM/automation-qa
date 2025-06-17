@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+    .error-msg {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <form id="register-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+    <div class="error-msg"></div>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo">
+    <div class="error-msg"></div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("register-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let nombre = document.getElementById("nombre");
+        let correo = document.getElementById("correo");
+
+        nombre.nextElementSibling.textContent = "";
+        correo.nextElementSibling.textContent = "";
+
+        if (!nombre.value.trim()) {
+          nombre.nextElementSibling.textContent = "Falta el nombre";
+        }
+        if (!correo.value.trim()) {
+          correo.nextElementSibling.textContent = "Falta el correo";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
