@@ -12,7 +12,7 @@ describe('Eventos Mouse', () => {
         cy.title().should('eq', 'Automation QA');
         cy.wait(tiempo);
 
-        cy.get("#column-a").drag("column-b", {force:true})
+        cy.get("#column-a").drag("column-b", { force: true })
     });
 
     it('Mouse Over', () => {
@@ -28,7 +28,7 @@ describe('Eventos Mouse', () => {
     it.only('Slider', () => {
         let tiempo = 1000;
         cy.visit('https://lulisesrm.github.io/automation-qa/site-resources/PDP/pdp.html')
-       // cy.title().should('eq', 'Automation QA');
+        cy.title().should('eq', 'Automation QA');
         cy.wait(tiempo);
 
         cy.get('.product-price').invoke('attr', 'style', 'color: red;');

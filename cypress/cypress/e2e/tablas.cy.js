@@ -74,7 +74,6 @@ describe('Elementos de una tabla', ()=>{
         }
     });
 
-    
 
 
 
