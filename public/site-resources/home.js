@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // 1. Cargar productos desde JSON (puede ser archivo local o API)
   // Aquí asumo que tienes un endpoint /api/productos que devuelve un array de productos
   const response = await fetch('/api/productos');
-  const productos = await response.json();
+  let productos = await response.json();
+  productos = productos.filter(prod => prod.id >= 1 && prod.id <= 6);
 
   // 2. Función para crear un div.product con el producto dado
   const crearProductoDiv = (producto, idSuffix = '') => {

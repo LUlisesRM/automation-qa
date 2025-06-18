@@ -51,22 +51,16 @@
   </header>
 
   <main class="product-detail-container">
+
     <div class="product-images">
-      <div class="main-image">
-        <img src="site-resources/src/bicicleta-gris-grande.webp" alt="Bicicleta Urbana Gris">
-      </div>
-      <div class="thumbnail-gallery">
-        <img src="site-resources/src/bicicleta-gris-thumb1.webp" alt="Vista lateral">
-        <img src="site-resources/src/bicicleta-gris-thumb2.webp" alt="Detalle del manillar">
-        <img src="site-resources/src/bicicleta-gris-thumb3.webp" alt="Rueda delantera">
-        <img src="site-resources/src/bicicleta-gris-thumb4.webp" alt="Detalle del asiento">
-      </div>
+      <div class="main-image" id="main-image-container"></div>
+      <div class="thumbnail-gallery"></div>
     </div>
 
     <div class="product-info">
       <h1 id="product-title"></h1>
       <p id="product-price"></p>
-      <p class="product-availability">En stock: <span>15 unidades</span></p>
+      <p class="product-availability">En stock: <span id="product-stock"></span></p>
 
       <div class="product-options">
         <div class="option-group">
@@ -94,7 +88,7 @@
       </div>
 
       <div class="product-actions">
-        <button class="add-to-cart-btn">Añadir al Carrito</button>
+        <button class="add-to-cart-btn" >Añadir al Carrito</button>
         <button class="buy-now-btn">Comprar Ahora</button>
       </div>
 
@@ -105,6 +99,11 @@
         <ul id="product-characteristics"></ul>
       </div>
     </div>
+
+    <div id="cart-feedback" style="display:none; color: green; margin-top: 10px;">
+      Producto añadido al carrito
+    </div>
+
   </main>
 
   <footer id="footer">

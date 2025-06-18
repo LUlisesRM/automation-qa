@@ -1,82 +1,222 @@
 [
   {
     "id": 1,
-    "nombre": "Bicicleta Urbana Gris",
-    "precio": 4500,
-    "descripcion": "Bicicleta urbana de acero con cambios Shimano de 7 velocidades.",
-    "imagen": "src/bicicleta-gris.webp",
-    "categoria": "urbana"
+    "nombre": "Bicicleta MTB Canyon",
+    "precio": 1200,
+    "stock": 10,
+    "descripcion": "Potente bicicleta",
+    "imagen": "src/bicicleta-blanca.webp",
+    "thumbnails": ["casco1a.jpg", "casco1b.jpg"],
+    "caracteristicas": ["Ajuste rápido", "Ventilación mejorada", "Material ultra ligero"],
+    "categoria": "null"
   },
   {
     "id": 2,
-    "nombre": "Bicicleta Blanca Ruta",
-    "precio": 5200,
-    "descripcion": "Bicicleta ligera ideal para entrenamientos en carretera.",
-    "imagen": "src/bicicleta-blanca.webp",
-    "categoria": "ruta"
+    "nombre": "Bicicleta de Ruta Canyon",
+    "precio": 350,
+    "stock": 25,
+    "descripcion": "Guantes Potente bicicleta",
+    "imagen": "src/bicicleta-blanca-ruta.webp",
+    "thumbnails": ["guantes1a.jpg", "guantes1b.jpg"],
+    "caracteristicas": ["Antideslizantes", "Acolchado cómodo", "Respirables"],
+    "categoria": "null"
   },
   {
     "id": 3,
-    "nombre": "Bicicleta Violeta Montaña",
-    "precio": 4999,
-    "descripcion": "Bicicleta para montaña con suspensión delantera y frenos de disco.",
-    "imagen": "src/bicicleta-violeta.webp",
-    "categoria": "montaña"
+    "nombre": "Bicicleta MTB Canyon Gris",
+    "precio": 9800,
+    "stock": 5,
+    "descripcion": "Bicicleta de MBT ideal para entrenamientos y competencias.",
+    "imagen": "src/bicicleta-gris.webp",
+    "thumbnails": ["ruta1a.jpg", "ruta1b.jpg"],
+    "caracteristicas": ["Cuadro de aluminio", "Cambio Shimano", "Llantas delgadas"],
+    "categoria": "ruta"
   },
   {
     "id": 4,
-    "nombre": "Bicicleta Perla Híbrida",
-    "precio": 4700,
-    "descripcion": "Bicicleta híbrida para ciudad y caminos ligeros.",
-    "imagen": "src/bicicleta-perla.webp",
-    "categoria": "hibrida"
+    "nombre": "Bicicleta MTB Canyon Hueso",
+    "precio": 800,
+    "stock": 12,
+    "descripcion": "Diseño clásico ",
+    "imagen": "src/bicicleta-hueso.webp",
+    "thumbnails": ["casco2a.jpg", "casco2b.jpg"],
+    "caracteristicas": ["Visera desmontable", "Estilo retro", "Sistema de ajuste"],
+    "categoria": "null"
   },
   {
     "id": 5,
-    "nombre": "Bicicleta Hueso Eléctrica",
-    "precio": 8000,
-    "descripcion": "Bicicleta eléctrica con batería de 36V y motor de 250W.",
-    "imagen": "src/bicicleta-hueso.webp",
-    "categoria": "electricas"
+    "nombre": "Bicicleta MTB Canyon Perla",
+    "precio": 450,
+    "stock": 20,
+    "descripcion": "Potente bicicleta",
+    "imagen": "src/bicicleta-perla.webp",
+    "thumbnails": ["rodilleras1a.jpg"],
+    "caracteristicas": ["Ajuste ergonómico", "Espuma EVA", "Velcro resistente"],
+    "categoria": "null"
   },
   {
     "id": 6,
-    "nombre": "Casco Multiuso Rojo",
-    "precio": 750,
-    "descripcion": "Casco versátil con ventilación para uso urbano o deportivo.",
-    "imagen": "src/casco-rojo.webp",
-    "categoria": "cascos-multiu"
+    "nombre": "Bicicleta MTB Canyon Violeta",
+    "precio": 400,
+    "stock": 18,
+    "descripcion": "Potente bicicleta",
+    "imagen": "src/bicicleta-violeta.webp",
+    "thumbnails": ["coderas1a.jpg"],
+    "caracteristicas": ["Flexible", "Transpirable", "Resistente a impactos"],
+    "categoria": "null"
   },
   {
     "id": 7,
-    "nombre": "Casco de Ruta Negro",
-    "precio": 890,
-    "descripcion": "Casco aerodinámico diseñado para rutas largas.",
-    "imagen": "src/casco-ruta.webp",
-    "categoria": "cascos-ruta"
+    "nombre": "Bicicleta Eléctrica E-Rider",
+    "precio": 16999,
+    "stock": 3,
+    "descripcion": "Potente bicicleta eléctrica para trayectos urbanos y recreativos.",
+    "imagen": "src/electrica1.webp",
+    "thumbnails": ["electrica1a.jpg", "electrica1b.jpg"],
+    "caracteristicas": ["Motor 250W", "Batería extraíble", "Pantalla LCD"],
+    "categoria": "null"
   },
   {
     "id": 8,
-    "nombre": "Rodilleras y Coderas MTB",
-    "precio": 600,
-    "descripcion": "Protecciones resistentes para downhill y montaña.",
-    "imagen": "src/rodilleras.webp",
-    "categoria": "rodilleras"
+    "nombre": "Cadena Reforzada Antirrobo",
+    "precio": 299,
+    "stock": 50,
+    "descripcion": "Cadena de acero reforzada con recubrimiento antirayones.",
+    "imagen": "src/cadena1.webp",
+    "thumbnails": ["cadena1a.jpg"],
+    "caracteristicas": ["Llave de seguridad", "Acero templado", "Uso rudo"],
+    "categoria": "null"
   },
   {
     "id": 9,
-    "nombre": "Bicicleta Plegable Compact",
-    "precio": 5300,
-    "descripcion": "Diseño compacto y ligero, ideal para transporte público.",
-    "imagen": "src/bicicleta-plegable.webp",
-    "categoria": "plegables"
+    "nombre": "Casco Ruta AeroX",
+    "precio": 1450,
+    "stock": 7,
+    "descripcion": "Casco aerodinámico para ciclismo de ruta de alto rendimiento.",
+    "imagen": "src/casco3.webp",
+    "thumbnails": ["casco3a.jpg"],
+    "caracteristicas": ["Canales de aire", "Espuma EPS", "Correas ultraligeras"],
+    "categoria": "null"
   },
   {
     "id": 10,
-    "nombre": "Bicicleta de Ruta Blanca Pro",
-    "precio": 6400,
-    "descripcion": "Marco de aluminio, ideal para competencias.",
-    "imagen": "src/bicicleta-blanca-dos.webp",
-    "categoria": "ruta"
+    "nombre": "Guantes de Invierno Polar",
+    "precio": 420,
+    "stock": 15,
+    "descripcion": "Guantes térmicos con protección contra viento y humedad.",
+    "imagen": "src/guantes2.webp",
+    "thumbnails": ["guantes2a.jpg"],
+    "caracteristicas": ["Tela térmica", "Impermeables", "Pantalla táctil compatible"],
+    "categoria": "null"
+  },
+  {
+    "id": 11,
+    "nombre": "Bicicleta Plegable UrbanGo",
+    "precio": 7800,
+    "stock": 4,
+    "descripcion": "Fácil de guardar, ideal para transporte público o espacios reducidos.",
+    "imagen": "src/plegable1.webp",
+    "thumbnails": ["plegable1a.jpg"],
+    "caracteristicas": ["Cuadro de acero", "Sistema de plegado rápido", "Ruedas 20 pulgadas"],
+    "categoria": "null"
+  },
+  {
+    "id": 12,
+    "nombre": "Timbre Vintage Classic",
+    "precio": 120,
+    "stock": 40,
+    "descripcion": "Timbre de estilo clásico con sonido fuerte y claro.",
+    "imagen": "src/timbre1.webp",
+    "thumbnails": ["timbre1a.jpg"],
+    "caracteristicas": ["Aleación metálica", "Fácil instalación", "Diseño retro"],
+    "categoria": "null"
+  },
+  {
+    "id": 13,
+    "nombre": "Casco Multi-Uso SafeMax",
+    "precio": 990,
+    "stock": 10,
+    "descripcion": "Versátil para bicicleta, patineta o patines.",
+    "imagen": "src/casco4.jpg",
+    "thumbnails": ["casco4a.jpg"],
+    "caracteristicas": ["Certificación CE", "Correas ajustables", "Espuma interna suave"],
+    "categoria": "null"
+  },
+  {
+    "id": 14,
+    "nombre": "Kit de Luces LED Recargables",
+    "precio": 520,
+    "stock": 30,
+    "descripcion": "Incluye luz frontal y trasera con batería USB.",
+    "imagen": "src/luces1.jpg",
+    "thumbnails": ["luces1a.jpg"],
+    "caracteristicas": ["Alta visibilidad", "Modos intermitentes", "Recargables vía USB"],
+    "categoria": "null"
+  },
+  {
+    "id": 15,
+    "nombre": "Bicicleta Híbrida TrailMix",
+    "precio": 8600,
+    "stock": 6,
+    "descripcion": "Combinación perfecta entre confort urbano y resistencia de montaña.",
+    "imagen": "src/hibrida1.jpg",
+    "thumbnails": ["hibrida1a.jpg", "hibrida1b.jpg"],
+    "caracteristicas": ["Cuadro de aluminio", "Suspensión delantera", "Manubrio ergonómico"],
+    "categoria": "null"
+  },
+  {
+    "id": 16,
+    "nombre": "Portabidón de Aluminio",
+    "precio": 160,
+    "stock": 60,
+    "descripcion": "Ligero y resistente, compatible con todo tipo de bicis.",
+    "imagen": "src/portabidon1.jpg",
+    "thumbnails": ["portabidon1a.jpg"],
+    "caracteristicas": ["Fácil instalación", "Aluminio anodizado", "Diseño universal"],
+    "categoria": "null"
+  },
+  {
+    "id": 17,
+    "nombre": "Bicicleta Urbana CityFlow",
+    "precio": 6200,
+    "stock": 8,
+    "descripcion": "Bicicleta elegante y funcional para el día a día en ciudad.",
+    "imagen": "src/urbana1.jpg",
+    "thumbnails": ["urbana1a.jpg"],
+    "caracteristicas": ["Asiento cómodo", "Canastilla delantera", "Cuadro bajo"],
+    "categoria": "null"
+  },
+  {
+    "id": 18,
+    "nombre": "Kit Herramientas Emergencia",
+    "precio": 280,
+    "stock": 45,
+    "descripcion": "Multiherramienta portátil para ajustes y reparaciones rápidas.",
+    "imagen": "src/herramientas1.jpg",
+    "thumbnails": ["herramientas1a.jpg"],
+    "caracteristicas": ["Incluye 16 funciones", "Compacto", "Construcción metálica"],
+    "categoria": "null"
+  },
+  {
+    "id": 19,
+    "nombre": "Pompa Manual Compacta",
+    "precio": 220,
+    "stock": 33,
+    "descripcion": "Inflador portátil compatible con válvulas presta y schrader.",
+    "imagen": "src/bomba1.jpg",
+    "thumbnails": ["bomba1a.jpg"],
+    "caracteristicas": ["Soporte para cuadro", "Ligera", "Alta presión"],
+    "categoria": "null"
+  },
+  {
+    "id": 20,
+    "nombre": "Reflectores de Seguridad Clip-On",
+    "precio": 90,
+    "stock": 70,
+    "descripcion": "Set de reflectores para ropa o mochila, ideal para ciclistas nocturnos.",
+    "imagen": "src/reflectores1.jpg",
+    "thumbnails": ["reflectores1a.jpg"],
+    "caracteristicas": ["Fácil de colocar", "Alta visibilidad", "Resistentes al agua"],
+    "categoria": "null"
   }
 ]
