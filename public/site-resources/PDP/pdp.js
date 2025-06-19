@@ -1,108 +1,50 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    if (!id) return console.log('❌ No hay ID en la URL');
+document.addEventListener("DOMContentLoaded", async () => {
+  const contenedor = document.getElementById("productos-plp");
 
-    try {
-        const response = await fetch('/api/productos');
-        const productos = await response.json();
-        const producto = productos.find(p => p.id == id);
+  // 1. Obtener parámetros de la URL
+  const params = new URLSearchParams(window.location.search);
+  const categoriaParam = params.get("categoria");
+  const subcategoriaParam = params.get("subcategoria");
 
-        if (!producto) {
-            console.log('❌ No se encontró el producto con id:', id);
-            return;
-        }
+  if (!categoriaParam || !subcategoriaParam) {
+    contenedor.innerHTML = "<p>❌ Categoría o subcategoría no válida.</p>";
+    return;
+  }
 
-        console.log('✅ Producto cargado:', producto);
+  try {
+    // 2. Cargar los productos desde el backend
+    const res = await fetch("/api/productos");
+    const productos = await res.json();
 
-        // Mostrar info del producto
-        document.getElementById('product-title').textContent = producto.nombre;
-        document.getElementById('product-price').textContent = `$ ${producto.precio.toFixed(2)} MXN`;
-        document.getElementById('product-stock').textContent = `${producto.stock} unidades`;
-        document.getElementById('product-description').textContent = producto.descripcion;
+    // 3. Filtrar productos por categoría y subcategoría
+    const productosFiltrados = productos.filter(prod =>
+      prod.categoria === categoriaParam &&
+      prod.subcategoria === subcategoriaParam
+    );
 
-        // Imagen principal
-        const mainImageContainer = document.getElementById('main-image-container');
-        const mainImg = document.createElement('img');
-        mainImg.src = `../${producto.imagen}`;
-        mainImg.alt = producto.nombre;
-        mainImageContainer.innerHTML = '';
-        mainImageContainer.appendChild(mainImg);
-
-        // Miniaturas
-        const galeria = document.querySelector('.thumbnail-gallery');
-        galeria.innerHTML = '';
-        const imagenes = producto.thumbnails?.length ? producto.thumbnails : Array(4).fill(producto.imagen);
-        imagenes.forEach((url, index) => {
-            const img = document.createElement('img');
-            img.src = `../site-resources/${url}`;
-            img.alt = `Vista ${index + 1} de ${producto.nombre}`;
-            galeria.appendChild(img);
-        });
-
-        // Características
-        const caracteristicasList = document.getElementById('product-characteristics');
-        caracteristicasList.innerHTML = '';
-
-        if (Array.isArray(producto.caracteristicas)) {
-            producto.caracteristicas.forEach(carac => {
-                const li = document.createElement('li');
-                li.textContent = carac;
-                caracteristicasList.appendChild(li);
-            });
-        } else {
-            console.warn('⚠️ El producto no tiene características definidas.');
-        }
-
-        // Agregar al carrito
-        const addToCartBtn = document.querySelector('.add-to-cart-btn');
-        const feedback = document.getElementById('cart-feedback');
-
-        addToCartBtn.addEventListener('click', () => {
-            const cantidad = parseInt(document.getElementById('quantity').value, 10) || 1;
-
-            const productoCarrito = {
-                id: producto.id,
-                nombre: producto.nombre,
-                precio: producto.precio,
-                imagen: producto.imagen,
-                cantidad: cantidad
-            };
-
-            console.log('🛒 Agregando al carrito:', productoCarrito);
-
-            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-            const existente = carrito.find(p => p.id === productoCarrito.id);
-
-            if (existente) {
-                existente.cantidad += productoCarrito.cantidad;
-                console.log('🔁 Producto ya existía. Nueva cantidad:', existente.cantidad);
-            } else {
-                carrito.push(productoCarrito);
-                console.log('🆕 Producto agregado al carrito.');
-            }
-
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            console.log('📦 Carrito actualizado:', carrito);
-
-            // Mostrar retroalimentación
-            if (feedback) {
-                feedback.textContent = '✅ Producto añadido al carrito';
-                feedback.style.display = 'block';
-                feedback.style.opacity = 1;
-                console.log('💬 Feedback mostrado');
-
-                setTimeout(() => {
-                    feedback.style.opacity = 0;
-                    setTimeout(() => {
-                        feedback.style.display = 'none';
-                        console.log('💬 Feedback ocultado');
-                    }, 300);
-                }, 1500);
-            }
-        });
-
-    } catch (error) {
-        console.error('❌ Error al cargar el producto:', error);
+    if (productosFiltrados.length === 0) {
+      contenedor.innerHTML = "<p>📭 No hay productos disponibles en esta categoría.</p>";
+      return;
     }
+
+    // 4. Generar productos dinámicamente
+    productosFiltrados.forEach(producto => {
+      const card = document.createElement("div");
+      card.className = "producto-card";
+
+      card.innerHTML = `
+        <a href="../pdp/pdp.html?id=${producto.id}">
+          <img src="../${producto.imagen}" alt="${producto.nombre}">
+        </a>
+        <h3>${producto.nombre}</h3>
+        <p class="precio">$${producto.precio.toFixed(2)}</p>
+        <a href="../pdp/pdp.html?id=${producto.id}" class="btn-detalle">Ver detalle</a>
+      `;
+
+      contenedor.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error al cargar productos:", error);
+    contenedor.innerHTML = "<p>❌ Ocurrió un error al cargar los productos.</p>";
+  }
 });

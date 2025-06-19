@@ -2,13 +2,13 @@
   {
     "id": 1,
     "nombre": "Bicicleta MTB Canyon",
+    "imagen": "src/bicicleta-blanca.webp",
     "precio": 1200,
     "stock": 10,
     "descripcion": "Potente bicicleta",
-    "imagen": "src/bicicleta-blanca.webp",
     "thumbnails": ["casco1a.jpg", "casco1b.jpg"],
     "caracteristicas": ["Ajuste rápido", "Ventilación mejorada", "Material ultra ligero"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "imagen": "src/bicicleta-blanca-ruta.webp",
     "thumbnails": ["guantes1a.jpg", "guantes1b.jpg"],
     "caracteristicas": ["Antideslizantes", "Acolchado cómodo", "Respirables"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "imagen": "src/bicicleta-gris.webp",
     "thumbnails": ["ruta1a.jpg", "ruta1b.jpg"],
     "caracteristicas": ["Cuadro de aluminio", "Cambio Shimano", "Llantas delgadas"],
-    "categoria": "ruta"
+    "categoria": "bicicletas"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "imagen": "src/bicicleta-hueso.webp",
     "thumbnails": ["casco2a.jpg", "casco2b.jpg"],
     "caracteristicas": ["Visera desmontable", "Estilo retro", "Sistema de ajuste"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "imagen": "src/bicicleta-perla.webp",
     "thumbnails": ["rodilleras1a.jpg"],
     "caracteristicas": ["Ajuste ergonómico", "Espuma EVA", "Velcro resistente"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "imagen": "src/bicicleta-violeta.webp",
     "thumbnails": ["coderas1a.jpg"],
     "caracteristicas": ["Flexible", "Transpirable", "Resistente a impactos"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "imagen": "src/electrica1.webp",
     "thumbnails": ["electrica1a.jpg", "electrica1b.jpg"],
     "caracteristicas": ["Motor 250W", "Batería extraíble", "Pantalla LCD"],
-    "categoria": "null"
+    "categoria": "bicicletas"
   },
   {
     "id": 8,

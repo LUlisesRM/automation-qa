@@ -9,6 +9,15 @@ app.use(express.static('public'));
 
 const usuariosPath = path.join(__dirname, 'usuarios.json');
 
+app.get('/api/productos', (req, res) => {
+  fs.readFile(path.join(__dirname, 'productos.json'), 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'No se pudieron cargar los productos' });
+    }
+    res.json(JSON.parse(data));
+  });
+});
+
 app.post('/api/registro', (req, res) => {
   const nuevoUsuario = req.body;
 

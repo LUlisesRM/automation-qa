@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation QA</title>
+    <link rel="stylesheet" href="estilos-plp.css">
+    <link rel="stylesheet" href="../home/estilos-home.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="top-bar">
+            <div class="logo" id="site-logo">
+                <a href="../../index.html">
+                    <img src="../src/logo.jpg" alt="Logo Empresa">
+                </a>
+            </div>
+            <div class="right-links">
+                <a href="#" id="login-link">Login</a>
+                <a href="../crear-cuenta/crear-cuenta.html" id="register-link">Crear cuenta</a>
+                <a href="../carrito/carrito.html" id="cart-link">
+                    <img src="../carrito/icono-carrito.webp" alt="Carrito" style="width: 24px; vertical-align: middle;">
+                </a>
+            </div>
+        </div>
+
+        <nav class="menu-bar">
+            <ul id="menu-categorias"></ul>
+        </nav>
+
+    </header>
+
+
+    <div class="plp-container">
+  <!-- Columna izquierda (filtros + breadcrumb) -->
+  <aside class="sidebar">
+    <nav class="breadcrumb">
+      <a href="../../index.html">Inicio</a> / 
+      <span id="breadcrumb-actual">Categoría</span>
+    </nav>
+
+    <section class="filtros">
+      <h3>Filtros</h3>
+
+      <!-- Filtro por precio (dropdown) -->
+      <div class="filtro-dropdown">
+        <button class="filtro-toggle">Precio</button>
+        <div class="filtro-contenido">
+          <label>Desde: <input type="number" id="precio-min" min="0" placeholder="$0" /></label>
+          <label>Hasta: <input type="number" id="precio-max" min="0" placeholder="$9999" /></label>
+          <button id="filtrar-precio">Aplicar</button>
+        </div>
+      </div>
+
+      <!-- Filtros por checkbox -->
+      <div class="filtro-checkbox">
+        <h4>Marca</h4>
+        <label><input type="checkbox" value="Specialized" class="marca" /> Specialized</label>
+        <label><input type="checkbox" value="Trek" class="marca" /> Trek</label>
+        <label><input type="checkbox" value="Giant" class="marca" /> Giant</label>
+      </div>
+
+      <div class="filtro-checkbox">
+        <h4>Género</h4>
+        <label><input type="checkbox" value="Hombre" class="genero" /> Hombre</label>
+        <label><input type="checkbox" value="Mujer" class="genero" /> Mujer</label>
+        <label><input type="checkbox" value="Unisex" class="genero" /> Unisex</label>
+      </div>
+
+      <div class="filtro-checkbox">
+        <h4>Rodada</h4>
+        <label><input type="checkbox" value="26" class="rodada" /> 26"</label>
+        <label><input type="checkbox" value="27.5" class="rodada" /> 27.5"</label>
+        <label><input type="checkbox" value="29" class="rodada" /> 29"</label>
+      </div>
+
+      <div class="filtro-checkbox">
+        <h4>Talla</h4>
+        <label><input type="checkbox" value="S" class="talla" /> S</label>
+        <label><input type="checkbox" value="M" class="talla" /> M</label>
+        <label><input type="checkbox" value="L" class="talla" /> L</label>
+      </div>
+
+      <div class="filtro-checkbox">
+        <h4>Tipo</h4>
+        <label><input type="checkbox" value="Montaña" class="tipo" /> Montaña</label>
+        <label><input type="checkbox" value="Ruta" class="tipo" /> Ruta</label>
+        <label><input type="checkbox" value="Eléctrica" class="tipo" /> Eléctrica</label>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Columna derecha (productos) -->
+  <section class="contenido-productos">
+    <h1 id="titulo-categoria">Productos</h1>
+    <div id="product-list" class="plp-grid">
+      <!-- Aquí se renderizan dinámicamente -->
+    </div>
+  </section>
+</div>
+
+
+    <main>
+        <h1 id="titulo-categoria">Productos</h1>
+        <section id="product-list" class="plp-grid">
+            <!-- Aquí se generarán los productos dinámicamente -->
+        </section>
+    </main>
+
+
+    <footer id="footer">
+        <div class="footer-row shipping-details">
+            <p>Envío gratis en compras mayores a $999 | Entrega express disponible | Rastreo en tiempo real</p>
+        </div>
+        <div class="footer-row info-columns">
+            <div class="column">
+                <h3>Acerca de</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tendencias</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Compra de productos</a></li>
+                    <li><a href="#">Envío del producto</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-row copyright">
+            <p>&copy; 2025 Tienda BikeParts | Calle Ficticia 123, CDMX | Tel: (56) 56862565</p>
+        </div>
+    </footer>
+    <script src="plp.js"></script>
+    <script type="module" src="../home/menu-bar.js"></script>
+</body>
+
+</html>

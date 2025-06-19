@@ -29,7 +29,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 1px solid #ddd;
 }
 
@@ -119,8 +118,17 @@ header {
   padding: 10px;
   color: #fff;
   text-decoration: none;
+  list-style: none;
+  text-decoration: none;
 }
 
+.menu-bar a {
+  color: white
+}
+
+a {
+  text-decoration: none;
+}
 
 /* Banner */
 .banner {

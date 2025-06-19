@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automation QA</title>
-  <link rel="stylesheet" href="site-resources/estilos-home.css">
+  <link rel="stylesheet" href="site-resources/home/estilos-home.css">
 </head>
 
 <body>
@@ -26,28 +26,12 @@
         </a>
       </div>
     </div>
+
+
     <nav class="menu-bar">
-      <ul>
-        <li>Categorías
-          <ul>
-            <li><a href="#" id="cat-urbanas">Bicicleta Urbana</a></li>
-            <li><a href="#" id="cat-montana">Bicicleta de Montaña</a></li>
-            <li><a href="#" id="cat-ruta">Bicicleta de Ruta</a></li>
-            <li><a href="#" id="cat-hibridas">Bicicleta Híbrida</a></li>
-            <li><a href="#" id="cat-electricas">Bicicleta Eléctrica</a></li>
-            <li><a href="#" id="cat-plegables">Bicicleta Plegable</a></li>
-          </ul>
-        </li>
-        <li>Protección/Cascos
-          <ul>
-            <li><a href="#" id="cat-cascos-multiu">Cascos Multi-Uso</a></li>
-            <li><a href="#" id="cat-cascos-ruta">Cascos de Ruta</a></li>
-            <li><a href="#" id="cat-cascos-montana">Cascos de Montaña</a></li>
-            <li><a href="#" id="cat-rodilleras">Rodilleras y Coderas</a></li>
-          </ul>
-        </li>
-      </ul>
+      <ul id="menu-categorias"></ul>
     </nav>
+
   </header>
 
 
@@ -124,7 +108,9 @@
       <p>&copy; 2025 Tienda BikeParts | Calle Ficticia 123, CDMX | Tel: (56) 56862565</p>
     </div>
   </footer>
-  <script src="site-resources/home.js"></script>
+  
+  <script type="module" src="site-resources/home/menu-bar.js"></script>
+  <script src="site-resources/home/carousel-novedades.js"></script>
 </body>
 
 </html>
