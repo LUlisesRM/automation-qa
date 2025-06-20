@@ -10,5 +10,29 @@
     "telefono": "5656862565",
     "usuario": "Yulzin",
     "contrasena": "Admin123"
+  },
+  {
+    "nombre": "Pruebas",
+    "apellido": "Ulises",
+    "direccion": "mehdhew",
+    "fechaNacimiento": "2000-02-25",
+    "genero": "masculino",
+    "correo": "vulojazase@mailinator.com",
+    "lada": "+1",
+    "telefono": "5575357042",
+    "usuario": "Pruebasqa",
+    "contrasena": "12345"
+  },
+  {
+    "nombre": "JUANA",
+    "apellido": "Proident adipisicin",
+    "direccion": "Corrupti eu incidun",
+    "fechaNacimiento": "1984-09-28",
+    "genero": "femenino",
+    "correo": "ceuirw@gacv.com",
+    "lada": "+44",
+    "telefono": "6743274327",
+    "usuario": "Prueba2qa",
+    "contrasena": "123456"
   }
 ]

@@ -1,4 +1,3 @@
-// registros.js
 export function enviarRegistro(form) {
   // Si hay algún error visible, no enviar
   const erroresVisibles = form.querySelectorAll(".error-msg");
@@ -27,8 +26,11 @@ export function enviarRegistro(form) {
   })
   .then(res => res.json())
   .then(data => {
-    alert(data.mensaje);
-    form.reset();
+    // Guardar el nombre del usuario en localStorage para simular login
+    localStorage.setItem('usuario', datos.nombre);
+
+    // Redirigir automáticamente al index
+    window.location.href = '../../index.html';
   })
   .catch(err => {
     console.error('❌ Error al registrar:', err);

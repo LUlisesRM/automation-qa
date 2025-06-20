@@ -18,6 +18,25 @@ app.get('/api/productos', (req, res) => {
   });
 });
 
+
+app.post('/api/login', (req, res) => {
+  const { email, password } = req.body;
+
+  fs.readFile(path.join(__dirname, 'usuarios.json'), 'utf8', (err, data) => {
+    if (err) return res.status(500).json({ error: 'Error interno del servidor' });
+
+    const usuarios = JSON.parse(data);
+    const usuario = usuarios.find(user => user.correo === email && user.contrasena === password);
+
+    if (!usuario) {
+      return res.status(401).json({ error: 'Credenciales incorrectas' });
+    }
+
+    res.json({ mensaje: 'Login exitoso', nombre: usuario.usuario });
+  });
+});
+
+
 app.post('/api/registro', (req, res) => {
   const nuevoUsuario = req.body;
 

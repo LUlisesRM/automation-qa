@@ -1,50 +1,44 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const contenedor = document.getElementById("productos-plp");
-
-  // 1. Obtener parámetros de la URL
   const params = new URLSearchParams(window.location.search);
-  const categoriaParam = params.get("categoria");
-  const subcategoriaParam = params.get("subcategoria");
+  const id = params.get("id");
 
-  if (!categoriaParam || !subcategoriaParam) {
-    contenedor.innerHTML = "<p>❌ Categoría o subcategoría no válida.</p>";
+  if (!id) {
+    document.querySelector(".product-info").innerHTML = "<p>❌ ID de producto no válido.</p>";
     return;
   }
 
   try {
-    // 2. Cargar los productos desde el backend
     const res = await fetch("/api/productos");
     const productos = await res.json();
 
-    // 3. Filtrar productos por categoría y subcategoría
-    const productosFiltrados = productos.filter(prod =>
-      prod.categoria === categoriaParam &&
-      prod.subcategoria === subcategoriaParam
-    );
-
-    if (productosFiltrados.length === 0) {
-      contenedor.innerHTML = "<p>📭 No hay productos disponibles en esta categoría.</p>";
+    const producto = productos.find(p => String(p.id) === id);
+    if (!producto) {
+      document.querySelector(".product-info").innerHTML = "<p>📭 Producto no encontrado.</p>";
       return;
     }
 
-    // 4. Generar productos dinámicamente
-    productosFiltrados.forEach(producto => {
-      const card = document.createElement("div");
-      card.className = "producto-card";
+    // Insertar imagen principal
+    const mainImage = document.getElementById("main-image-container");
+    mainImage.innerHTML = `<img src="../${producto.imagen}" alt="${producto.nombre}">`;
 
-      card.innerHTML = `
-        <a href="../pdp/pdp.html?id=${producto.id}">
-          <img src="../${producto.imagen}" alt="${producto.nombre}">
-        </a>
-        <h3>${producto.nombre}</h3>
-        <p class="precio">$${producto.precio.toFixed(2)}</p>
-        <a href="../pdp/pdp.html?id=${producto.id}" class="btn-detalle">Ver detalle</a>
-      `;
+    // Insertar información del producto
+    document.getElementById("product-title").textContent = producto.nombre;
+    document.getElementById("product-price").textContent = `$${producto.precio.toFixed(2)}`;
+    document.getElementById("product-stock").textContent = producto.stock || "Disponible";
+    document.getElementById("product-description").textContent = producto.descripcion || "Sin descripción.";
 
-      contenedor.appendChild(card);
-    });
-  } catch (error) {
-    console.error("Error al cargar productos:", error);
-    contenedor.innerHTML = "<p>❌ Ocurrió un error al cargar los productos.</p>";
+    // Características si existen
+    const charList = document.getElementById("product-characteristics");
+    charList.innerHTML = "";
+    if (producto.caracteristicas && Array.isArray(producto.caracteristicas)) {
+      producto.caracteristicas.forEach(c => {
+        const li = document.createElement("li");
+        li.textContent = c;
+        charList.appendChild(li);
+      });
+    }
+  } catch (err) {
+    console.error("❌ Error al cargar PDP:", err);
+    document.querySelector(".product-info").innerHTML = "<p>❌ Error al cargar producto.</p>";
   }
 });
